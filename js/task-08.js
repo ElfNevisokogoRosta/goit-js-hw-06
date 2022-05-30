@@ -17,4 +17,3 @@ function onFormSubmit(event){
   };
   console.log(user);
 };
-console.log(document.querySelector('.login-form').elements[0]);

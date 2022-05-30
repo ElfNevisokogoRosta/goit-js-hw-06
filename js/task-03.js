@@ -13,14 +13,6 @@ const images = [
   },
 ];
 const galleryListEl = document.querySelector('.gallery');
-const addImages = ({url, alt})=>{
-  const wraperEl = document.createElement('li');
-  wraperEl.classList.add('img-wraper');
-  const imageEl = document.createElement('img');
-  imageEl.src = url;
-  imageEl.alt = alt;
-  wraperEl.appendChild(imageEl);
-  return wraperEl;
-  };
-const listElements = images.map(addImages);
-galleryListEl.append(...listElements);
+const imagesEl = images.map(({url, alt}) => `<li class="img-wraper"><img src="${url}" alt="${alt}"></li>`).join("");
+console.log(imagesEl);
+galleryListEl.insertAdjacentHTML('beforeend', imagesEl);

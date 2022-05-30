@@ -1,6 +1,7 @@
-const emailEl =  document.querySelector("[name=email]");
-const passwordEl = document.querySelector("[name=password]");
 const formEl = document.querySelector('.login-form');
+const emailEl = formEl.elements['email'];
+const passwordEl = formEl.elements['password'];
+
 formEl.addEventListener('submit', onFormSubmit)
 function onFormSubmit(event){
   event.preventDefault();
@@ -16,3 +17,4 @@ function onFormSubmit(event){
   };
   console.log(user);
 };
+console.log(document.querySelector('.login-form').elements[0]);
